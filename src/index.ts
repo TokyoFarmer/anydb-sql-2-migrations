@@ -1,7 +1,7 @@
-import Promise = require('bluebird');
-import _ = require('lodash');
-import fs = require('fs');
-import path = require('path');
+import * as Promise from 'bluebird';
+import * as _ from 'lodash';
+import * as fs from 'fs'
+import * as path from 'path';
 
 import { Column, Table, Transaction, AnydbSql } from 'anydb-sql-2';
 
@@ -50,7 +50,7 @@ export function create(db: AnydbSql, tasks: string | MigrationTask[]) {
       .allWithin(tx)
       .then(migs => {
         var alreadyExecuted = migs.map(m => m.version)
-        return _(list).sortBy(m => m.name).filter(m => !_.contains(alreadyExecuted, m.name)).value()
+        return _(list).sortBy(m => m.name).filter(m => !_.includes(alreadyExecuted, m.name)).value()
       })
   }
 

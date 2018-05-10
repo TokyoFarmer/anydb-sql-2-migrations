@@ -1,13 +1,16 @@
 {
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
     "noImplicitAny": true,
     "sourceMap": false,
     "outDir": "lib",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
-  "exclude": [
-    "node_modules"
-  ]
 }
