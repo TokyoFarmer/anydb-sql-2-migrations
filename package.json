@@ -1,6 +1,6 @@
 {
   "name": "anydb-sql-2-migrations",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "Database migrations for anydb-sql-2",
   "main": "lib/index.js",
   "scripts": {
@@ -33,10 +33,10 @@
   "types": "./lib/index.d.ts",
   "devDependencies": {
     "@types/lodash": "^4.14.108",
-    "typescript": "^2.8.3",
     "blue-tape": "^0.1.8",
     "source-map-support": "^0.2.8",
     "sqlite3": "^3.0.4",
-    "tsc-wrap-definition": "^1.0.2"
+    "tsc-wrap-definition": "^1.0.2",
+    "typescript": "^2.8.3"
   }
 }
