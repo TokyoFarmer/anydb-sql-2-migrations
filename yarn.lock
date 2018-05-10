@@ -63,8 +63,8 @@ any-db@^2.1.0:
     parse-db-url "0.0.0"
 
 anydb-sql-2@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/anydb-sql-2/-/anydb-sql-2-1.0.0.tgz#4f6bda68b6d3ec9204ac6c97aace7a22d479718d"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/anydb-sql-2/-/anydb-sql-2-1.0.3.tgz#0151713110f7d393322a97ba685f8c2bdd912d1c"
   dependencies:
     any-db "^2.1.0"
     any-db-mysql "^2.1.2"
@@ -493,11 +493,7 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-lodash@4.1.x:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.1.0.tgz#299894283de01a9eefbedff4c4b9b00a6a2e6e96"
-
-lodash@^4.17.5:
+lodash@4.1.x, lodash@^4.17.5:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
 
