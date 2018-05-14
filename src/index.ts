@@ -9,8 +9,8 @@ export interface Migration {
   version: string
 }
 
-export interface MigrationsTable extends Table<Migration> {
-  version: Column<string>
+export interface MigrationsTable extends Table<string, Migration> {
+  version: Column<'version', string>
 }
 
 export interface MigFn {
@@ -18,12 +18,12 @@ export interface MigFn {
 }
 
 export interface MigrationTask {
-  up: MigFn; down: MigFn; name: string
+  up: MigFn; down: MigFn; name: string;
 }
 
 export function create(db: AnydbSql, tasks: string | MigrationTask[]) {
   var list: Array<MigrationTask> = [];
-  var migrations = <MigrationsTable>db.define<Migration>({
+  var migrations = db.define<'_migrations', Migration>({
     name: '_migrations',
     columns: {
       version: { dataType: db.dialect() === 'mysql' ? 'varchar(255)' : 'text', notNull: true, primaryKey: true }
@@ -94,13 +94,15 @@ export function create(db: AnydbSql, tasks: string | MigrationTask[]) {
         if (!migrations.length) {
           throw new Error("No migrations available to rollback");
         }
-        return Promise.each(migrations, mig => {
+        return Promise.each(migrations, (mig: Migration) => {
           const task = _.find(list, item => item.name == mig.version);
 
           return runSingle(tx, "down", task);
         });
       }));
   }
+
+  Promise.each(['b', 'c'], (item) => )
 
   function loadFromPath(location: string) {
     fs.readdirSync(location)

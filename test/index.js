@@ -1,7 +1,7 @@
 require('source-map-support').install()
 
 var mig = require('../lib/index');
-var anydbsql = require('anydb-sql');
+var anydbsql = require('anydb-sql-2').anydbSQL;
 var path = require('path');
 var t = require('blue-tape');
 var Promise = require('bluebird');
