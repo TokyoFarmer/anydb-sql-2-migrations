@@ -4,6 +4,7 @@
   "description": "Database migrations for anydb-sql-2",
   "main": "lib/index.js",
   "scripts": {
+    "prepublish": "tsc",
     "test": "tape test/*.js",
     "build": "tsc",
     "watch": "tsc -w",
