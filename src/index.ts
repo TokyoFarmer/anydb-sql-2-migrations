@@ -102,8 +102,6 @@ export function create(db: AnydbSql, tasks: string | MigrationTask[]) {
       }));
   }
 
-  Promise.each(['b', 'c'], (item) => )
-
   function loadFromPath(location: string) {
     fs.readdirSync(location)
       .filter(file => (/\.js$/.test(file)))
