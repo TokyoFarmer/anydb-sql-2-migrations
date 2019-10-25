@@ -43,6 +43,6 @@
     "source-map-support": "^0.2.8",
     "sqlite3": "^4.0.0",
     "tsc-wrap-definition": "^1.0.2",
-    "typescript": "^2.8.3"
+    "typescript": "^3.6.0"
   }
 }

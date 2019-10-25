@@ -8,7 +8,7 @@
     "noImplicitAny": true,
     "sourceMap": true,
     "outDir": "lib",
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "declaration": true,
     "typeRoots": [
       "node_modules/@types"
